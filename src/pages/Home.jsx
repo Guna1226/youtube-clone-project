@@ -57,23 +57,28 @@ export default function Home() {
     <>
       <CategoryBar />
 
-      <div className="max-w-8xl mx-auto grid grid-cols-1 md:grid-cols-6 gap-4 p-4 bg-[#0f0f0f] text-white">
-        {/* Sidebar */}
-        <aside className="md:col-span-1 hidden md:block">
-          <Sidebar />
-        </aside>
+      <div className="w-full max-w-full overflow-x-hidden bg-[#0f0f0f] text-white min-h-screen">
+  <div className="grid grid-cols-1 md:grid-cols-6 gap-4 p-2">
+    
+    {/* Sidebar — hidden on mobile */}
+    <aside className="hidden md:block md:col-span-1">
+      <Sidebar />
+    </aside>
 
-        {/* Main content */}
-        <main className="md:col-span-5">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {movie.map((v) => (
-              <Link key={v.id} to={`/watch?v=${v.id}`}>
-                <VideoCard video={v} />
-              </Link>
-            ))}
-          </div>
-        </main>
+    {/* Main content */}
+    <main className="md:col-span-5 w-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+        {movie.map((v) => (
+          <Link key={v.id} to={`/watch?v=${v.id}`}>
+            <VideoCard video={v} />
+          </Link>
+        ))}
       </div>
+    </main>
+
+  </div>
+</div>
+
     </>
   );
 }

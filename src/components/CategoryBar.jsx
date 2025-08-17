@@ -19,7 +19,8 @@ export default function CategoryBar() {
   ];
 
   return (
-    <div className="flex items-center gap-3 px-4 py-3 bg-[#0f0f0f] overflow-x-auto scrollbar-hide">
+   <div className="hidden sm:flex  items-center gap-3 px-4 py-3 bg-[#0f0f0f] overflow-x-auto scrollbar-hide">
+
       {categories.map((category) => (
         <button
           key={category}

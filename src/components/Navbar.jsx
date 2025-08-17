@@ -28,7 +28,7 @@ export default function Navbar() {
   return (
     <>
       {/* Header */}
-      <header className="sticky top-0 z-30 bg-gray-900 text-white px-4 py-3 flex items-center justify-between">
+      <header className="sticky top-0 z-30 bg-gray-900 text-white px-2 py-4 flex items-center justify-between">
         {/* Left Section */}
         <div className="flex items-center gap-3">
           <button
@@ -92,11 +92,15 @@ export default function Navbar() {
   )}
 
   {/* Mobile search + mic */}
-  <button className="sm:hidden ml-2 p-2 bg-[#222] rounded-full hover:bg-[#333]">
-    <FaSearch size={16} />
-  </button>
-  <button className="ml-2 p-2 bg-[#222] rounded-full hover:bg-[#333]">
-    <FaMicrophone size={16} />
+  <input
+    type="text"
+    placeholder="Search"
+    className="flex sm:hidden flex-1 px-3 py-1.5 ml-2 bg-[#222] text-white text-sm rounded-full placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-white/20"
+  />
+
+  {/* Mic Button */}
+  <button className="hidden sm:inline-flex ml-1 p-2 bg-[#222] rounded-full hover:bg-[#333]">
+    <FaMicrophone size={16} className="text-white" />
   </button>
 </div>
 
@@ -104,11 +108,13 @@ export default function Navbar() {
 
         {/* Right Section */}
         <div className="flex items-center gap-3">
-          <button className="flex items-center gap-1 px-3 py-1 bg-[#222] rounded-full hover:bg-[#333]">
-            <FaPlus size={14} />
+          <button className="flex items-center gap-1 px-1 py-1 bg-[#222] rounded-full hover:bg-[#333]">
+             <span className="hidden sm:inline">
+    <FaPlus size={14} />
+  </span>
             <span className="hidden sm:inline">Create</span>
           </button>
-          <button className="p-2 hover:bg-[#222] rounded-full relative">
+          <button className="p-1 hover:bg-[#222] rounded-full relative">
             <FaBell size={18} />
             <span className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span>
           </button>

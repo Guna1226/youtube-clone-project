@@ -8,9 +8,9 @@ export default function VideoCard( {video} ){
   
   return (
 
-<div className="bg-[#0f0f0f] rounded-lg overflow-hidden flex flex-col">
+<div className="bg-[#0f0f0f] rounded-lg overflow-hidden flex flex-col w-full max-w-full">
       {/* Thumbnail */}
-  <img alt='logo' src={video?.snippet?.thumbnails?.medium.url} />
+  <img alt='logo' className="w-full h-auto object-cover max-w-full" src={video?.snippet?.thumbnails?.medium.url} />
    {/* Video Info */}
       <div className="p-2 flex flex-col flex-grow">
   <h2 className="mt-2 text-sm font-semibold text-white line-clamp-2">{video?.snippet?.title}</h2>
