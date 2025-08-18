@@ -22,7 +22,7 @@ export default function Sidebar() {
   ];
 
   return (
-    <nav className="sticky top-16 py-2 bg-[#0f0f0f] rounded shadow-sm text-white w-60">
+    <nav className="fixed top-26 py-2 bg-[#0f0f0f] rounded shadow-sm text-white w-60">
       <ul className="space-y-2">
         {items.map((item) => (
           <li

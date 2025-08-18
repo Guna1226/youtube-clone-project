@@ -11,7 +11,7 @@ export default function Home() {
   const dispatch = useDispatch();
 
   const getMovie = async () => {
-    const API_KEY = "AIzaSyAKlQ3btUjINZvWzIc3maqc0W9xCX4-5ZI";
+    const API_KEY = "AIzaSyBE4YOs6UGehpToWBlE22UwbZ1tdoARzhg";
     let allVideos = [];
 
     // First request (50 videos)
